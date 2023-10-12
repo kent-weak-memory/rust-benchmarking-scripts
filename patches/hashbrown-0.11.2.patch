@@ -1,0 +1,12 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index a056c3c..f91d6a3 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -12,6 +12,7 @@ exclude = [".travis.yml", "bors.toml", "/ci/*"]
+ edition = "2018"
+ 
+ [dependencies]
++once_cell = { version = "=1.8.0", default-features = true }
+ # For the default hasher
+ ahash = { version = "0.7.0", default-features = false, optional = true }
+ 

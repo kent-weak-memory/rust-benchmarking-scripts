@@ -1,0 +1,42 @@
+set terminal postscript eps size 6.5,6 enhanced color font 'Helvetica,15' linewidth 2
+set output 'bench.eps'
+set style line 2 lc rgb 'black' lt 1 lw 1
+set style data histogram
+set style histogram rowstacked
+set style histogram cluster gap 1
+set style fill pattern border -1
+set boxwidth 0.9
+set grid ytics
+set xtics format ""
+set yrange [0:2.5]
+#set xtics rotate by -45
+#set xtics rotate out
+set offset -0.3,-0.3,0,0
+
+set multiplot \
+    layout 2,1 upwards \
+    spacing 0.1,0.07 \
+    margins 0.08,0.94,0.08,0.94
+    # spacing 0.1,0.07
+
+unset key
+
+# Draw solid line at 1
+set arrow from graph 0,first 1 to graph 1,first 1 nohead lc rgb "#000000" front
+
+# Plot bottom row
+plot "bench1.dat" using 2:xtic(1) title "purecap-bounds" ls 2,    \
+     "bench1.dat" using 4 title "purecap-nobounds" ls 2,   \
+     "bench1.dat" using 5 title "hybrid-nobounds" ls 2
+
+# Draw key at top
+set key outside
+set key above
+
+# Plot top row
+plot "bench2.dat" using 2:xtic(1) title "purecap-bounds" ls 2,    \
+     "bench2.dat" using 4 title "purecap-nobounds" ls 2,   \
+     "bench2.dat" using 5 title "hybrid-nobounds" ls 2
+
+# Draw title
+set title "Benchmark results"

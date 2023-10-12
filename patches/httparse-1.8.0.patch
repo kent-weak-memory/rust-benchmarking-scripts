@@ -1,0 +1,21 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index c84a305..8daa4cb 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -19,6 +19,8 @@ std = []
+ 
+ [dev-dependencies]
+ criterion = "0.3.5"
++csv = "=1.1"
++proc-macro2 = "=1.0.42"
+ 
+ [lib]
+ bench = false
+@@ -28,6 +30,6 @@ name = "parse"
+ harness = false
+ 
+ [profile.bench]
+-lto = true
++lto = false
+ codegen-units = 1
+ opt-level = 3

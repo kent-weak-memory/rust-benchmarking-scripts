@@ -1,0 +1,12 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 73afb2a..a32819f 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -37,6 +37,6 @@ name = "benches"
+ harness = false
+ 
+ [profile.bench]
+-lto = true
++lto = false
+ debug = true
+ 

@@ -1,0 +1,12 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 5b9940df..d65dcd99 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -98,6 +98,7 @@ glam019        = { package = "glam", version = "0.19", optional = true }
+ glam020        = { package = "glam", version = "0.20", optional = true }
+ glam021        = { package = "glam", version = "0.21", optional = true }
+ cust_core      = { version = "0.1", optional = true }
++proc-macro2    = { version = "=1.0.42" }
+ 
+ 
+ [dev-dependencies]

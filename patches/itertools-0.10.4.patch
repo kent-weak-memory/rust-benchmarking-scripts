@@ -1,0 +1,17 @@
+diff --git a/Cargo.toml b/Cargo.toml
+index 53d4a6f..14cf1bc 100644
+--- a/Cargo.toml
++++ b/Cargo.toml
+@@ -25,10 +25,11 @@ test = false
+ 
+ [dependencies]
+ either = { version = "1.0", default-features = false }
++proc-macro2 = { version = "=1.0.42" }
+ 
+ [dev-dependencies]
+ rand = "0.7"
+-criterion = "=0" # TODO how could this work with our minimum supported Rust version?
++criterion = "=0.3.6" # TODO how could this work with our minimum supported Rust version?
+ paste = "1.0.0" # Used in test_std to instantiate generic tests
+ 
+ [dev-dependencies.quickcheck]
